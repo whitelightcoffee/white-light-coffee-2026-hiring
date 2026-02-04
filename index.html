@@ -8,6 +8,8 @@
         :root {
             --primary-color: #1a1a1a;
             --accent-color: #d4a373; 
+            --line-color: #00b900;
+            --email-btn-color: #649ed6;
             --bg-color: #ffffff;
             --text-color: #333333;
             --light-bg: #fcfaf7;
@@ -86,28 +88,41 @@
         .footer-action {
             text-align: center;
             margin-top: 60px;
-            padding: 60px 20px;
+            padding: 80px 20px;
             background: var(--primary-color);
             color: #fff;
         }
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
         .email-btn {
             display: inline-block;
-            background-color: #649ed6; 
+            background-color: var(--email-btn-color);
             color: #fff;
             padding: 15px 50px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
             font-size: 1.1em;
-            margin-bottom: 20px;
             transition: opacity 0.3s;
         }
-        .email-btn:hover {
-            opacity: 0.9;
-        }
-        .line-id {
-            color: var(--accent-color);
+        .line-btn {
+            display: inline-block;
+            background-color: var(--line-color);
+            color: #fff;
+            padding: 15px 50px;
+            text-decoration: none;
+            border-radius: 50px;
             font-weight: bold;
+            font-size: 1.1em;
+            transition: opacity 0.3s;
+        }
+        .email-btn:hover, .line-btn:hover {
+            opacity: 0.9;
         }
         .truth-hint {
             margin-top: 30px;
@@ -146,9 +161,9 @@
             </ul>
             <p style="margin-top: 25px;"><strong>我們希望你：</strong></p>
             <ul>
-                <li>擁有<strong>成長心態</strong>，因為我們熱愛學習，時常更新及打破過去的思維和做法，你需要能擁抱這些快速的變化。</li>
-                <li>擁有好奇心，也樂意不斷學習。</li>
-                <li>能夠跟不同特質的人溝通和合作</li>
+                <li>擁有<strong>成長心態</strong>，視挑戰為成長機會。</li>
+                <li>對精品咖啡有強烈好奇心，並謙虛學習所有的一切。</li>
+                <li>具備良好的溝通協調能力與團隊意識。</li>
             </ul>
         </div>
     </div>
@@ -157,21 +172,16 @@
         <h2>薪資福利 (Benefits)</h2>
         <ul>
             <li><strong>薪資：</strong>時薪 200/hr 起，依能力及考核程度加薪。</li>
-            <li><strong>時數：</strong>每日排班最多 9hrs (含吃飯休息時間，皆有支薪)，最短 4hrs。</li>
+            <li><strong>時數：</strong>每日排班最多 9hrs (含休息 0.5hr)，最短 4hrs。</li>
             <li><strong>休假：</strong>週休二日或更多，彈性安排。</li>
             <li><strong>保障：</strong>勞健保內含。</li>
-            <li><strong>專業：</strong>有餐飲經驗佳，無經驗我們也會教你。</li>
-            <li><strong>日常：</strong>上班日免費供應員工飲品</li>
+            <li><strong>專業：</strong>有經驗佳，無咖啡經驗我們也會教你，只要願意學習。</li>
+            <li><strong>日常：</strong>上班日免費供應員工飲品、豆子員購優惠。</li>
         </ul>
     </div>
 
     <div class="section">
         <h2>怎麼應徵 (How to Apply)</h2>
-        <div style="text-align: center; margin-bottom: 30px;">
-            <a href="mailto:whitelightcoffee@gmail.com" class="email-btn">📧 whitelightcoffee@gmail.com</a>
-            <p style="font-size: 0.9em; color: #666;">信件標題：應徵白光咖啡夥伴 - 你的名字</p>
-        </div>
-
         <div class="instruction-box">
             <div class="instruction-title">請在信件或私訊中簡單說明：</div>
             <ol>
@@ -183,14 +193,18 @@
         </div>
         
         <div style="text-align: center;" class="truth-hint">
-            請附上一張清晰生活照讓我們知道你是誰:)
+            不用寫得很正式，我們想聽真話。
         </div>
     </div>
 </div>
 
 <div class="footer-action">
     <h3>準備好加入白光了嗎？</h3>
-    <p>私訊 Line@ 提供簡歷：<span class="line-id">@wap3464c</span></p>
+    <p>請點擊下方按鈕聯繫我們</p>
+    <div class="btn-group">
+        <a href="https://line.me/R/ti/p/@wap3464c" target="_blank" class="line-btn">透過 Line@ 應徵 (@wap3464c)</a>
+        <a href="mailto:whitelightcoffee@gmail.com" class="email-btn">Email 投遞簡歷</a>
+    </div>
 </div>
 
 </body>
