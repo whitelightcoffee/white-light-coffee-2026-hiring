@@ -6,129 +6,172 @@
     <title>加入我們 | 白光咖啡 White Light Coffee</title>
     <style>
         :root {
-            --primary-color: #1a1a1a;
-            --accent-color: #d4a373; 
+            --primary-color: #111111;
+            --accent-color: #b89774; /* 內斂的高級感咖啡金 */
             --line-color: #00b900;
-            --email-btn-color: #649ed6;
+            --email-btn-color: #5086ba;
             --bg-color: #ffffff;
-            --text-color: #333333;
-            --light-bg: #fcfaf7;
-            --info-box-bg: #f5f7f9;
+            --text-color: #2c2c2c;
+            --muted-color: #777777;
+            --light-bg: #fbf9f6; /* 極簡溫潤微調暖白 */
+            --info-box-bg: #f4f6f8;
         }
         body {
-            font-family: "PingFang TC", "STHeiti", "Microsoft JhengHei", sans-serif;
-            line-height: 1.8;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang TC", "STHeiti", "Microsoft JhengHei", sans-serif;
+            line-height: 1.85;
             color: var(--text-color);
             background-color: var(--bg-color);
             margin: 0;
             padding: 0;
+            -webkit-font-smoothing: antialiased;
         }
         .container {
-            max-width: 700px;
-            margin: 60px auto;
-            padding: 20px;
+            max-width: 680px;
+            margin: 80px auto;
+            padding: 0 24px;
         }
         header {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 90px;
         }
         h1 {
-            letter-spacing: 8px;
+            letter-spacing: 10px;
             color: var(--primary-color);
-            margin-bottom: 5px;
-            font-size: 2.5em;
+            margin-bottom: 8px;
+            font-size: 2.6em;
+            font-weight: 600;
         }
         .subtitle {
             color: var(--accent-color);
-            font-size: 0.9em;
-            letter-spacing: 3px;
-            margin-bottom: 30px;
+            font-size: 0.85em;
+            letter-spacing: 4px;
+            margin-bottom: 35px;
             text-transform: uppercase;
+            font-weight: 500;
         }
         .quote {
             font-style: italic;
-            color: #888;
-            margin-top: 20px;
-            font-size: 1.1em;
+            color: var(--muted-color);
+            margin-top: 24px;
+            font-size: 1.05em;
+            letter-spacing: 1px;
         }
         .section {
-            margin-bottom: 60px;
+            margin-bottom: 70px;
         }
         h2 {
-            font-size: 1.4em;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 25px;
+            font-size: 1.35em;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 12px;
+            margin-bottom: 28px;
             color: var(--primary-color);
             font-weight: 500;
+            letter-spacing: 1px;
         }
         .content-box {
             background-color: var(--light-bg);
-            padding: 30px;
-            border-radius: 2px;
+            padding: 35px;
+            border-radius: 4px;
+            border-left: 3px solid var(--accent-color);
+        }
+        h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
         .instruction-box {
             background-color: var(--info-box-bg);
-            padding: 30px;
+            padding: 35px;
             border-radius: 12px;
             margin-top: 40px;
         }
         .instruction-title {
-            font-weight: bold;
-            margin-bottom: 15px;
+            font-weight: 600;
+            margin-bottom: 18px;
             color: var(--primary-color);
+            font-size: 1.05em;
         }
         ul, ol {
             padding-left: 20px;
             margin-bottom: 0;
         }
         li {
-            margin-bottom: 12px;
+            margin-bottom: 14px;
+            color: #3a3a3a;
+        }
+        li strong {
+            color: var(--primary-color);
+        }
+        .location-text {
+            font-size: 1.1em;
+            color: var(--primary-color);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         .footer-action {
             text-align: center;
-            margin-top: 60px;
-            padding: 80px 20px;
+            margin-top: 80px;
+            padding: 90px 24px;
             background: var(--primary-color);
             color: #fff;
+            border-radius: 4px;
+        }
+        .footer-action h3 {
+            color: #fff;
+            font-size: 1.4em;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        .footer-action p {
+            color: #999;
+            font-size: 0.95em;
+            margin-bottom: 30px;
         }
         .btn-group {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
+            gap: 16px;
             margin-top: 25px;
         }
-        .email-btn {
-            display: inline-block;
-            background-color: var(--email-btn-color);
-            color: #fff;
-            padding: 15px 50px;
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 320px;
+            padding: 16px 0;
             text-decoration: none;
             border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: opacity 0.3s;
+            font-weight: 600;
+            font-size: 1.05em;
+            letter-spacing: 1px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         .line-btn {
-            display: inline-block;
             background-color: var(--line-color);
             color: #fff;
-            padding: 15px 50px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: opacity 0.3s;
         }
-        .email-btn:hover, .line-btn:hover {
-            opacity: 0.9;
+        .email-btn {
+            background-color: var(--email-btn-color);
+            color: #fff;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            opacity: 0.95;
         }
         .truth-hint {
-            margin-top: 30px;
+            margin-top: 35px;
             font-style: italic;
-            color: #666;
+            color: var(--muted-color);
             font-size: 0.95em;
+            letter-spacing: 0.5px;
         }
     </style>
 </head>
@@ -151,7 +194,7 @@
     <div class="section">
         <h2>招募職位 (Opening)</h2>
         <div class="content-box">
-            <h3>咖啡店長期合作夥伴、儲備幹部 <small style="color:#888;">(一至二名)</small></h3>
+            <h3>咖啡店長期合作夥伴 <small style="color:var(--muted-color); font-weight: 400; font-size: 0.8em; margin-left: 5px;">(一至二名)</small></h3>
             <p><strong>工作內容：</strong></p>
             <ul>
                 <li>提供來店顧客親切友善的體驗</li>
@@ -159,7 +202,7 @@
                 <li>店內餐食製作出餐（包含鹹食、麵包與甜點）</li>
                 <li>沖煮義式咖啡、手沖咖啡</li>
             </ul>
-            <p style="margin-top: 25px;"><strong>我們希望你：</strong></p>
+            <p style="margin-top: 28px;"><strong>我們希望你：</strong></p>
             <ul>
                 <li>擁有<strong>成長心態</strong>，視挑戰為成長機會。</li>
                 <li>對精品咖啡有強烈好奇心，並謙虛學習所有的一切。</li>
@@ -171,18 +214,18 @@
     <div class="section">
         <h2>薪資福利 (Benefits)</h2>
         <ul>
-            <li><strong>薪資：</strong>無經驗時薪200/hr起，依能力及考核程度加薪。若咖啡館經歷豐富及具獨立出杯能力，歡迎來談 210/hr 起跳。</li>
-            <li><strong>薪資：</strong>若有管理潛力，工作內容涉及管理營運層面，另有管理津貼</li>
-            <li><strong>時數：</strong>每日排班6-8.5hrs (含休息 0.5hr)，週休二日，依據店裡排班需求、及你的能力和可配合時間討論。</li
+            <li><strong>薪資：</strong>時薪 200/hr 起，依能力及考核程度加薪。</li>
+            <li><strong>時數：</strong>每日排班最多 9hrs (含休息 0.5hr)，最短 4hrs。</li>
+            <li><strong>休假：</strong>週休二日或更多，彈性安排。</li>
             <li><strong>保障：</strong>勞健保內含。</li>
             <li><strong>專業：</strong>有經驗佳，無咖啡經驗我們也會教你，只要願意學習。</li>
-            <li><strong>日常：</strong>上班日免費供應員工飲品。</li>
+            <li><strong>日常：</strong>上班日免費供應員工飲品、豆子員購優惠。</li>
         </ul>
     </div>
 
     <div class="section">
         <h2>上班地點 (Location)</h2>
-        <p>📍 新北市林口區，未來可能輪調不同點，但都在林口</p>
+        <div class="location-text">📍 新北市林口區（需兩店輪調）</div>
     </div>
 
     <div class="section">
@@ -198,17 +241,17 @@
         </div>
         
         <div style="text-align: center;" class="truth-hint">
-            請至少附上一張正面生活照，讓我們知道你是誰:)
+            不用寫得很正式，我們想聽真話。
         </div>
     </div>
 </div>
 
 <div class="footer-action">
     <h3>準備好加入白光了嗎？</h3>
-    <p>請點擊下方按鈕聯繫我們</p>
+    <p>期待與你在白光相遇，請點擊下方按鈕聯繫我們</p>
     <div class="btn-group">
-        <a href="https://line.me/R/ti/p/@wap3464c" target="_blank" class="line-btn">透過 Line@ 應徵</a>
-        <a href="mailto:whitelightcoffee@gmail.com" class="email-btn">Email 投遞簡歷</a>
+        <a href="https://line.me/R/ti/p/@wap3464c" target="_blank" class="line-btn btn">透過 Line@ 應徵 (@wap3464c)</a>
+        <a href="mailto:whitelightcoffee@gmail.com" class="email-btn btn">Email 投遞簡歷</a>
     </div>
 </div>
 
